@@ -1,0 +1,40 @@
+.project-dashboard-overview { display: grid; gap: 16px; }
+.project-dashboard-chart {
+  display: grid;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid #d8e1ec;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.project-dashboard-chart-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+}
+
+.project-dashboard-chart h2 { margin: 0; color: var(--dashboard-ink); font-size: 23px; }
+.project-dashboard-chart p:not(.dashboard-kicker) { margin: 7px 0 0; color: var(--dashboard-muted); }
+.project-dashboard-chart-heading label { display: grid; min-width: 130px; gap: 6px; color: var(--dashboard-ink); font-size: 13px; font-weight: 700; }
+.project-dashboard-chart select { min-height: 40px; padding: 0 10px; border: 1px solid #c8d6e4; border-radius: 4px; color: var(--dashboard-ink); background: #fff; font: 400 14px var(--sans); }
+.project-dashboard-chart-canvas { height: 260px; }
+.project-dashboard-chart-canvas > p { display: grid; height: 100%; place-items: center; }
+.project-dashboard-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.project-dashboard-metrics > div { display: grid; gap: 5px; padding: 14px; border: 1px solid #d8e1ec; border-left: 4px solid; border-radius: 6px; background: #fff; }
+.project-dashboard-metrics span { color: var(--dashboard-muted); font-size: 13px; }
+.project-dashboard-metrics strong { color: var(--dashboard-ink); font-size: 25px; }
+.project-dashboard-bars { display: grid; height: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; padding: 8px 18px 0; border-bottom: 1px solid #dce5ef; }
+.project-dashboard-bar { display: grid; grid-template-rows: auto 1fr auto; min-width: 0; gap: 8px; text-align: center; }
+.project-dashboard-bar > strong { color: var(--dashboard-ink); font-size: 18px; }
+.project-dashboard-bar > div { display: flex; min-height: 0; align-items: end; justify-content: center; border-radius: 5px 5px 0 0; background: repeating-linear-gradient(to top, transparent 0, transparent 51px, #edf2f7 52px); }
+.project-dashboard-bar span { display: block; width: min(72px, 70%); min-height: 3px; border-radius: 5px 5px 0 0; transition: height 180ms ease; }
+.project-dashboard-bar small { color: var(--dashboard-muted); font-size: 13px; }
+
+@media (max-width: 760px) {
+  .project-dashboard-chart-heading { display: grid; align-items: stretch; }
+  .project-dashboard-chart-heading label { width: 100%; }
+  .project-dashboard-chart-canvas { height: 230px; }
+  .project-dashboard-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

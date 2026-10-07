@@ -1,0 +1,52 @@
+.company-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 14px;
+  align-items: end;
+  padding: 18px;
+  border: 1px solid #d8e1ec;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.company-filters label {
+  display: grid;
+  gap: 6px;
+  color: var(--dashboard-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.company-filters input,
+.company-filters select {
+  width: 100%;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid #c8d6e4;
+  border-radius: 4px;
+  color: var(--dashboard-ink);
+  background: #fff;
+  font: 400 14px var(--sans);
+}
+
+.company-filter-actions { display: flex; gap: 8px; }
+.company-filter-actions button { display: inline-flex; min-height: 40px; align-items: center; gap: 6px; padding: 0 10px; border: 0; border-radius: 4px; cursor: pointer; font: 650 13px var(--sans); }
+.company-filter-submit { color: #fff; background: var(--dashboard-blue); }
+.company-filter-reset { color: var(--dashboard-ink); background: #eef3f8; }
+.company-table-scroll table { min-width: 620px; }
+.company-status-indicator { display: inline-flex; align-items: center; gap: 7px; color: var(--dashboard-ink); font-size: 13px; font-weight: 700; white-space: nowrap; }
+.company-status-indicator > span { width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; box-shadow: 0 0 0 3px #e2e8f0; }
+.company-status-indicator.is-active > span { background: #22c55e; box-shadow: 0 0 0 3px #dcfce7; }
+.company-status-indicator.is-inactive > span { background: #ef4444; box-shadow: 0 0 0 3px #fee2e2; }
+.company-status-switch { width: 38px; min-width: 38px; height: 22px; padding: 2px; border: 0; border-radius: 999px; color: #7f1d1d; background: #fecaca; cursor: pointer; }
+.company-status-switch.is-active { color: #166534; background: #86efac; }
+.company-status-switch span { display: grid; width: 18px; height: 18px; place-items: center; border-radius: 50%; background: #fff; transition: transform 160ms ease; }
+.company-status-switch.is-active span { transform: translateX(16px); }
+
+@media (max-width: 760px) {
+  .company-filters { grid-template-columns: 1fr; }
+  .company-pagination { align-items: center !important; flex-direction: row !important; gap: 10px; }
+  .company-pagination > div { align-items: center !important; flex-direction: row !important; gap: 6px; }
+  .company-pagination button { padding: 8px; }
+}
