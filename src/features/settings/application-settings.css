@@ -1,0 +1,12 @@
+.application-settings { display: grid; max-width: 620px; gap: 22px; }
+.application-settings h2 { margin: 0; color: var(--dashboard-ink); font-size: 30px; }
+.application-settings > div > p:not(.dashboard-kicker) { margin: 8px 0 0; color: var(--dashboard-muted); line-height: 1.45; }
+.application-settings form { display: grid; gap: 18px; padding: 24px; border: 1px solid #d8e1ec; border-radius: 8px; background: #fff; }
+.application-settings label { display: grid; gap: 7px; color: var(--dashboard-ink); font-size: 14px; font-weight: 700; }
+.application-settings label small { color: var(--dashboard-muted); font-weight: 400; }
+.application-settings input { min-height: 42px; box-sizing: border-box; padding: 0 10px; border: 1px solid #c8d6e4; border-radius: 4px; color: var(--dashboard-ink); background: #fff; font: 400 14px var(--sans); }
+.application-settings-file { display: flex; min-height: 42px; align-items: center; gap: 8px; padding: 0 10px; border: 1px dashed #9fb6cc; border-radius: 4px; color: var(--dashboard-blue); background: #f7fbff; }
+.application-settings-file input { width: 100%; min-height: 0; padding: 0; border: 0; background: transparent; }
+.application-settings-preview { width: 96px; height: 96px; object-fit: contain; border: 1px solid #d8e1ec; border-radius: 6px; background: #f7fafd; }
+.application-settings button { justify-self: start; min-height: 42px; padding: 0 14px; border: 0; border-radius: 4px; cursor: pointer; color: #fff; background: var(--dashboard-blue); font: 650 14px var(--sans); }
+.application-settings button:disabled { cursor: not-allowed; opacity: .55; }

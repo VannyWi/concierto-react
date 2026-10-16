@@ -1,0 +1,59 @@
+.project-dashboard-overview { display: grid; gap: 16px; }
+.project-dashboard-summary-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+.project-dashboard-summary-heading h2 { margin: 0; color: var(--dashboard-ink); font-size: 20px; }
+.project-dashboard-summary-heading label { display: grid; gap: 6px; color: var(--dashboard-ink); font-size: 13px; font-weight: 700; }
+.project-dashboard-summary-heading select { min-height: 40px; min-width: 110px; padding: 0 10px; border: 1px solid #c8d6e4; border-radius: 4px; color: var(--dashboard-ink); background: #fff; font: 400 14px var(--sans); }
+.project-dashboard-chart { display: grid; gap: 20px; padding: 22px; border: 1px solid #d8e1ec; border-radius: 8px; background: #fff; }
+.project-dashboard-chart-heading { display: grid; gap: 16px; }
+.project-dashboard-chart-heading > * { min-width: 0; }
+.project-dashboard-chart h2 { margin: 0; color: var(--dashboard-ink); font-size: 23px; }
+.project-dashboard-chart p:not(.dashboard-kicker) { margin: 7px 0 0; color: var(--dashboard-muted); }
+.project-dashboard-range { display: grid; width: 100%; min-width: 0; grid-template-columns: repeat(4, minmax(140px, 1fr)) auto; gap: 10px; align-items: end; }
+.project-dashboard-range label { display: grid; min-width: 110px; gap: 6px; color: var(--dashboard-ink); font-size: 13px; font-weight: 700; }
+.project-dashboard-range label:last-child { min-width: 0; }
+.project-dashboard-range select { width: 100%; min-width: 0; min-height: 40px; box-sizing: border-box; padding: 0 10px; border: 1px solid #c8d6e4; border-radius: 4px; color: var(--dashboard-ink); background: #fff; font: 400 14px var(--sans); }
+.project-dashboard-company-picker { position: relative; }
+.project-dashboard-company-trigger { width: 100%; min-width: 0; min-height: 40px; padding: 8px 10px; overflow: hidden; border: 1px solid #c8d6e4; border-radius: 4px; color: var(--dashboard-ink); background: #fff; cursor: pointer; font: 400 14px var(--sans); text-align: left; text-overflow: ellipsis; white-space: nowrap; }
+.project-dashboard-company-menu { position: absolute; z-index: 3; top: calc(100% + 5px); right: 0; left: 0; overflow: hidden; border: 1px solid #b9cbdd; border-radius: 5px; background: #fff; box-shadow: 0 10px 24px rgb(7 54 100 / 18%); }
+.project-dashboard-company-search { display: flex; align-items: center; gap: 8px; padding: 10px; border-bottom: 1px solid #d8e1ec; color: var(--dashboard-blue); }
+.project-dashboard-company-search input { width: 100%; min-width: 0; min-height: 38px; box-sizing: border-box; padding: 0 10px; border: 1px solid #b9cbdd; border-radius: 4px; color: var(--dashboard-ink); font: 400 14px var(--sans); }
+.project-dashboard-company-options { display: grid; max-height: 220px; overflow-y: auto; }
+.project-dashboard-company-options button { display: grid; gap: 3px; padding: 11px 12px; border: 0; color: var(--dashboard-ink); background: #fff; cursor: pointer; font: 400 14px var(--sans); text-align: left; }
+.project-dashboard-company-options button:hover { background: #edf6ff; }
+.project-dashboard-company-options small, .project-dashboard-company-options p { color: var(--dashboard-muted); font-size: 12px; }
+.project-dashboard-company-options p { margin: 0; padding: 14px 12px; }
+.project-dashboard-filter-reset { align-self: end; min-height: 40px; padding: 0 12px; border: 1px solid #c8d6e4; border-radius: 4px; color: var(--dashboard-ink); background: #eef3f8; cursor: pointer; font: 650 13px var(--sans); white-space: nowrap; }
+.project-dashboard-chart-canvas { display: grid; grid-template-rows: auto minmax(0, 1fr); height: 320px; }
+.project-dashboard-chart-canvas > p { display: grid; height: 100%; place-items: center; }
+.project-dashboard-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.project-dashboard-metrics > div { display: grid; gap: 5px; padding: 14px; border: 1px solid #d8e1ec; border-left: 4px solid; border-radius: 6px; background: #fff; }
+.project-dashboard-metrics span { color: var(--dashboard-muted); font-size: 13px; }
+.project-dashboard-metrics strong { color: var(--dashboard-ink); font-size: 25px; }
+.project-dashboard-legend { display: flex; flex-wrap: wrap; gap: 18px; padding: 0 6px 8px 38px; color: var(--dashboard-muted); font-size: 12px; font-weight: 700; }
+.project-dashboard-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.project-dashboard-legend i { width: 18px; height: 9px; border-radius: 2px; }
+.project-dashboard-plot-scroll { min-width: 0; overflow-x: auto; overflow-y: hidden; }
+.project-dashboard-bar-chart { display: block; width: 100%; min-width: 640px; height: 100%; }
+.project-dashboard-bar-chart line { stroke: #e7edf4; stroke-width: 1; }
+.project-dashboard-bar-chart rect { cursor: default; outline: none; }
+.project-dashboard-bar-chart rect:focus { stroke: var(--dashboard-ink); stroke-width: 2; }
+.project-dashboard-axis-label, .project-dashboard-year-label { fill: #7b8ca1; font: 11px var(--sans); }
+.project-dashboard-axis-label { text-anchor: end; }
+.project-dashboard-year-label { text-anchor: middle; font-weight: 700; }
+.project-dashboard-bar-value { fill: #fff; font: 700 11px var(--sans); text-anchor: middle; }
+
+@media (max-width: 1100px) {
+  .project-dashboard-range { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-dashboard-filter-reset { grid-column: 1 / -1; }
+}
+
+@media (max-width: 760px) {
+  .project-dashboard-summary-heading { align-items: stretch; flex-direction: column; }
+  .project-dashboard-chart-heading { width: 100%; align-items: stretch; }
+  .project-dashboard-range { width: 100% !important; box-sizing: border-box; justify-self: stretch; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-dashboard-company-picker { grid-column: 1 / -1; min-width: 0 !important; }
+  .project-dashboard-filter-reset { grid-column: 1 / -1; }
+  .project-dashboard-chart-canvas { height: 290px; }
+  .project-dashboard-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-dashboard-legend { padding-left: 0; }
+}
